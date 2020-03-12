@@ -7,10 +7,8 @@ int MenuPrincipal(){
     int Choix;
     printf("--- Bataille Navale --- \n");
     printf("1 - Jouer \n");
-    printf("2 - Pseudo \n");
-    printf("3 - Leaderboard \n");
-    printf("4 - Aide \n");
-    printf("5 - Quitter \n\n");
+    printf("2 - Aide \n");
+    printf("3 - Quitter \n\n");
     printf("Séléction : ");
     scanf("%d", &Choix);
     fflush(stdin);
@@ -20,18 +18,32 @@ int MenuPrincipal(){
 void Redirection (Choix){
     switch(Choix){
         case 1:
+            InterfaceDeJeu();
             break;
         case 2:
+            Aide();
             break;
         case 3:
-            break;
-        case 4:
-            break;
-        case 5:
+            Quitter();
             break;
         default:
             break;
     }
+}
+
+void Aide() {
+    printf("--- Aide ---\n");
+    system("Pause");
+}
+
+void Quitter(){
+    printf("--- Quitter ---\n");
+    system("Pause");
+}
+
+void InterfaceDeJeu(){
+    printf("--- Bataille Navale ---\n");
+    system("Pause");
 }
 
 int main() {
@@ -40,5 +52,7 @@ int main() {
     int Choix = MenuPrincipal();
 
     Redirection(Choix);
+
+
     return 0;
 }
