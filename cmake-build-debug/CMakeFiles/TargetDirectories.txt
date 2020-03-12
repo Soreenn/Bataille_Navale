@@ -1,3 +1,3 @@
-C:/Users/TEMP.CPNV/CLionProjects/Bataille Navale/cmake-build-debug/CMakeFiles/Bataille_Navale.dir
-C:/Users/TEMP.CPNV/CLionProjects/Bataille Navale/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/TEMP.CPNV/CLionProjects/Bataille Navale/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+C:/Users/Gabriel.MACHADO-PERE/Documents/GitHub/Bataille-Navale/cmake-build-debug/CMakeFiles/Bataille_Navale.dir
+C:/Users/Gabriel.MACHADO-PERE/Documents/GitHub/Bataille-Navale/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/Gabriel.MACHADO-PERE/Documents/GitHub/Bataille-Navale/cmake-build-debug/CMakeFiles/rebuild_cache.dir

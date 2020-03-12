@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/Gabriel.MACHADO-PERE/Documents/GitHub/Bataille-Navale/main.c
+stdio.h
+-
+stdlib.h
+-
+windows.h
+-
+
