@@ -32,9 +32,14 @@ int Quitter(){
 }
 
 void InterfaceDeJeu(){
-    printf("--- Bataille Navale ---\n");
-    system("Pause");
-}
+    printf("--- Bataille Navale ---\n\n");
+    printf("     |  1 |  2 |  3 |  4 |  5 |  6 |  7 |  8 |  9 |  10 |\n");
+    for(char i = 'A'; i < 'K'; i++) {
+        printf("----------------------------------------------------------\n");
+        printf("%c    |    |    |    |    |    |    |    |    |    |     |\n", i);
+    }
+
+    }
 
 void Redirection (Choix){
     switch(Choix){
