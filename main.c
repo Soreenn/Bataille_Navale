@@ -8,7 +8,18 @@ int MenuPrincipal();
 void Aide() {
     system("cls");
     printf("--- Aide ---\n");
+    printf("Règles du jeu :\n\n");
+    printf("- Il y a 5 bateaux différents cachés dans la grille de jeu.\n");
+    printf("- Le but est de selectionner des cordonnées où tirer.\n");
+    printf("- Un bateau peut être touché ou coulé.\n");
+    printf("A toi de jouer !\n\n");
+    printf("Bateaux :\n\n");
+    printf("Un porte avion (5 cases) \n");
+    printf("Un Croiseur (4 cases) \n");
+    printf("Deux Contre torpilleurs (3 cases) \n");
+    printf("Un Torpilleur (2 cases) \n\n");
     system("Pause");
+    MenuPrincipal();
 }
 
 int Quitter(){
@@ -38,6 +49,7 @@ int Check(){
 }
 
 int InterfaceDeJeu(){
+    system("cls");
     printf("--- Bataille Navale ---\n\n");
     printf("     |  1 ||  2 ||  3 ||  4 ||  5 ||  6 ||  7 ||  8 ||  9 || 10 |\n");
     for(char i = 'A'; i < 'K'; i++) {
