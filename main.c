@@ -6,13 +6,15 @@
 int MenuPrincipal();
 
 void Aide() {
+    system("cls");
     printf("--- Aide ---\n");
     system("Pause");
 }
 
 int Quitter(){
-    printf("--- Quitter ---\n\n");
     char Quit;
+    system("cls");
+    printf("--- Quitter ---\n\n");
     printf("Vous êtes sûr(e) de vouloir quitter? \n\n");
     printf("Réponse (Y/N) : ");
     scanf("%c", &Quit);
@@ -32,20 +34,21 @@ int Quitter(){
 }
 
 int Check(){
-    
+
 }
 
 int InterfaceDeJeu(){
     printf("--- Bataille Navale ---\n\n");
     printf("     |  1 ||  2 ||  3 ||  4 ||  5 ||  6 ||  7 ||  8 ||  9 || 10 |\n");
     for(char i = 'A'; i < 'K'; i++) {
-        printf("\n----------------------------------------------------------\n");
+        printf("\n--------------------------------------------------------------------\n");
         printf("%c    ", i);
         printf("|    ");
         for(char e = 0; e < 5 ; e++){
             printf("||    ||    ");
         }
     }
+    system("Pause");
     }
 
 void Redirection (Choix){
@@ -66,6 +69,7 @@ void Redirection (Choix){
 
 int MenuPrincipal(){
     int Choix;
+    system("cls");
     printf("--- Bataille Navale --- \n");
     printf("1 - Jouer \n");
     printf("2 - Aide \n");
