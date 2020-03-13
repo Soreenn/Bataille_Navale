@@ -12,7 +12,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3713d15c-46c8-41d8-8b2c-c678de18411a" name="Default Changelist" comment="" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -26,21 +25,15 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1Yl2I9GvN35gHUwZdrsGInFZQCE" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-  </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
   </component>
   <component name="RunManager">
     <configuration name="Bataille_Navale" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Bataille_Navale" TARGET_NAME="Bataille_Navale" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Bataille_Navale" RUN_TARGET_NAME="Bataille_Navale">
@@ -66,6 +59,7 @@
       <workItem from="1584097118448" duration="8000" />
       <workItem from="1584097366554" duration="485000" />
       <workItem from="1584103026841" duration="4989000" />
+      <workItem from="1584128695856" duration="1868000" />
     </task>
     <servers />
   </component>
@@ -84,5 +78,49 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="1877" height="363" key="GridCell.Tab.0.bottom" timestamp="1584130577900">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1877" height="363" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1584130577900" />
+    <state width="1877" height="363" key="GridCell.Tab.0.center" timestamp="1584130577900">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1877" height="363" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1584130577900" />
+    <state width="1877" height="363" key="GridCell.Tab.0.left" timestamp="1584130577900">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1877" height="363" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1584130577900" />
+    <state width="1877" height="363" key="GridCell.Tab.0.right" timestamp="1584130577900">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1877" height="363" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1584130577900" />
+    <state width="1877" height="363" key="GridCell.Tab.1.bottom" timestamp="1584130577900">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1877" height="363" key="GridCell.Tab.1.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1584130577900" />
+    <state width="1877" height="363" key="GridCell.Tab.1.center" timestamp="1584130577900">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1877" height="363" key="GridCell.Tab.1.center/0.0.1920.1080@0.0.1920.1080" timestamp="1584130577900" />
+    <state width="1877" height="363" key="GridCell.Tab.1.left" timestamp="1584130577900">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1877" height="363" key="GridCell.Tab.1.left/0.0.1920.1080@0.0.1920.1080" timestamp="1584130577900" />
+    <state width="1877" height="363" key="GridCell.Tab.1.right" timestamp="1584130577900">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1877" height="363" key="GridCell.Tab.1.right/0.0.1920.1080@0.0.1920.1080" timestamp="1584130577900" />
+  </component>
+  <component name="XDebuggerManager">
+    <watches-manager>
+      <configuration name="CMakeRunConfiguration">
+        <watch expression="y = 'a'" language="ObjectiveC" />
+        <watch expression="y = 'A'" language="ObjectiveC" />
+        <watch expression="y" language="ObjectiveC" />
+        <watch expression="i" language="ObjectiveC" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>
