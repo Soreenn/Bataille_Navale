@@ -6,6 +6,13 @@
 int MenuPrincipal();
 void InterfaceDeJeu();
 
+int Boat1Life = 2;
+int Boat2Life = 3;
+int Boat3Life = 3;
+int Boat4Life = 4;
+int Boat5Life = 5;
+int Try;
+
 int Gride[10][10]={{0,0,0,0,0,0,0,0,0,0},
                    {0,0,0,0,0,0,0,0,0,0},
                    {0,0,0,0,0,0,0,0,0,0},
@@ -75,6 +82,12 @@ int Boat5[10][10]={{1,0,0,0,0,0,0,0,0,0},
 int y;
 int x;
 
+int score(){
+    int Score;
+    Score = 100 / Try * 100;
+    return Score;
+}
+
 void Aide() {
     system("cls");
     printf("--- Aide ---\n");
@@ -97,8 +110,8 @@ void Aide() {
 }
 
 int Quitter(){
-    char Quit;
     system("cls");
+    char Quit;
     printf("--- Quitter ---\n\n");
     printf("Vous êtes sûr(e) de vouloir quitter? \n\n");
     printf("Réponse (Y/N) : ");
@@ -112,7 +125,6 @@ int Quitter(){
             MenuPrincipal();
         }
         else{
-            printf("\n\n Mauvaise réponse \n\n");
             Quitter();
         }
     }
@@ -122,33 +134,50 @@ void Tirer(){
     if(Boat5[x-1][y-1] == 1){
         Gride[x-1][y-1] = 1;
         Boat5[x-1][y-1] = 0;
+        Boat5Life = Boat5Life - 1;
+        Try = Try + 1;
     }
     else{
-        Gride[x-1][y-1] = 2;
         if(Boat4[x-1][y-1] == 1){
             Gride[x-1][y-1] = 1;
             Boat4[x-1][y-1] = 0;
+            Try = Try + 1;
+            Boat4Life = Boat4Life - 1;
         }
         else{
-            Gride[x-1][y-1] = 2;
             if(Boat3[x-1][y-1] == 1){
                 Gride[x-1][y-1] = 1;
                 Boat3[x-1][y-1] = 0;
+                Try = Try + 1;
+                Boat3Life = Boat3Life - 1;
             }
             else{
-                Gride[x-1][y-1] = 2;
                 if(Boat2[x-1][y-1] == 1){
                     Gride[x-1][y-1] = 1;
                     Boat2[x-1][y-1] = 0;
+                    Boat2Life = Boat2Life - 1;
+                    Try = Try + 1;
                 }
                 else{
-                    Gride[x-1][y-1] = 2;
                     if(Boat1[x-1][y-1] == 1){
                         Gride[x-1][y-1] = 1;
                         Boat1[x-1][y-1] = 0;
+                        Boat1Life = Boat1Life - 1;
+                        Try = Try + 1;
                     }
                     else{
-                        Gride[x-1][y-1] = 2;
+                        if(Gride[x-1][y-1] == 1) {
+                            //Si déjà touché, ne rien faire
+                        }
+                        else{
+                            if(Gride[x-1][y-1] == 2){
+                                //Si déjà tiré, ne rien faire
+                            }
+                            else{
+                                Gride[x - 1][y - 1] = 2;
+                                Try = Try + 1;
+                            }
+                        }
                     }
                 }
             }
@@ -158,31 +187,55 @@ void Tirer(){
 }
 
 void InterfaceDeJeu() {
-    //Juste pour faire tourner en boucle histoire de tester
-        system("cls");
-        printf("--- Bataille Navale ---\n\n");
-        printf("     |  1  ||  2  ||  3  ||  4  ||  5  ||  6  ||  7  ||  8  ||  9  || 10  |\n");
-        for (char i = 1; i < 11; i++) {
-            printf("\n---------------------------------------------------------------------------\n");
-            if(i < 10) {
-                printf("%d    ", i);
-            }
-            else{
-                printf("%d   ", i);
-            }
-            for (char e = 1; e < 11; e++) {
-                if (Gride[i - 1][e - 1] == 1) {
-                    printf("|  O  |");
-                } else {
-                    if(Gride[i - 1][e - 1] == 2){
-                        printf("|  X  |");
-                    }
-                    else{
-                        printf("|  ?  |");
-                    }
+    system("cls");
+    int ContreTorpilleurNumber = 1;
+    printf("--- Bataille Navale ---\n\n");
+    printf("     |  1  ||  2  ||  3  ||  4  ||  5  ||  6  ||  7  ||  8  ||  9  || 10  |\n");
+    for (char i = 1; i < 11; i++) {
+        printf("\n---------------------------------------------------------------------------\n");
+        if(i < 10) {
+            printf("%d    ", i);
+        }
+        else{
+            printf("%d   ", i);
+        }
+        for (char e = 1; e < 11; e++) {
+            if (Gride[i - 1][e - 1] == 1) {
+                printf("|  O  |");
+            } else {
+                if(Gride[i - 1][e - 1] == 2){
+                    printf("|  X  |");
+                }
+                else{
+                    printf("|  ?  |");
                 }
             }
         }
+    }
+    if(Boat1Life == 0){
+        printf("\n\nTorpilleur coulé !");
+    }
+    if(Boat2Life == 0){
+        printf("\n\nContre Torpilleur %d coulé !", ContreTorpilleurNumber);
+        ContreTorpilleurNumber++;
+    }
+    if(Boat3Life == 0){
+        printf("\n\nContre Torpilleur %d coulé !", ContreTorpilleurNumber);
+        ContreTorpilleurNumber++;
+    }
+    if(Boat4Life == 0){
+        printf("\n\nCroiseur coulé !");
+    }
+    if(Boat5Life == 0){
+        printf("\n\nPorte Avion coulé !");
+    }
+    if(Boat1Life == 0 && Boat2Life == 0 && Boat3Life == 0 && Boat4Life == 0 && Boat5Life == 0){
+        int Score = score();
+        printf("\n\nVotre score est de %d points", Score);
+        system("\n\nPause");
+        MenuPrincipal();
+    }
+    else{
         printf("\n\n? = Inconnu\n");
         printf("X = A l'eau\n");
         printf("O = Touché");
@@ -193,6 +246,7 @@ void InterfaceDeJeu() {
         scanf("%d", &x);
         fflush(stdin);
         Tirer();
+    }
 }
 
 void Redirection (Choix){
