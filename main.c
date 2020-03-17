@@ -1,11 +1,21 @@
+/**
+ * author: Gabriel Pereira
+ * date: 17.03.2020
+ * description: Bataille Navale jouable avec différents menus
+ * version: 0.1
+ */
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <windows.h>
+//Sert à afficher les caractères latins
 #pragma set_character_execution("UTF-8")
 
+//Prototype des fonctions
 int MenuPrincipal();
 void InterfaceDeJeu();
 
+//Initialisation des variables des HP des différents bateaux et déclaration de la variable du nombre d'essaies
 int Boat1Life = 2;
 int Boat2Life = 3;
 int Boat3Life = 3;
@@ -13,6 +23,8 @@ int Boat4Life = 4;
 int Boat5Life = 5;
 int Try;
 
+//Mise en place des différentes grilles pour reset, positions des bateaux et tableau affiché en jeux
+//Les 0 sont vides et les 1 sont des bateaux (parties de bateaux plus précisément)
 int Restart[10][10]={{0,0,0,0,0,0,0,0,0,0},
                     {0,0,0,0,0,0,0,0,0,0},
                     {0,0,0,0,0,0,0,0,0,0},
@@ -145,15 +157,23 @@ int Boat5Model[10][10]={{1,0,0,0,0,0,0,0,0,0},
                    {0,0,0,0,0,0,0,0,0,0},
                    {0,0,0,0,0,0,0,0,0,0}};
 
+//Déclaration des variables de positions
 int y;
 int x;
 
+/**
+ * Calcule du score
+ * @return du score
+ */
 int score(){
     int Score;
     Score = 100 / Try * 100;
     return Score;
 }
 
+/**
+ * Fonction de l'aide du jeu renvoyant après la pause au Menu Principal
+ */
 void Aide() {
     system("cls");
     printf("--- Aide ---\n");
@@ -175,7 +195,10 @@ void Aide() {
     MenuPrincipal();
 }
 
-int Quitter(){
+/**
+ * Fonction permettant de quitter avec une confirmation de l'utilisateur
+ */
+void Quitter(){
     system("cls");
     char Quit;
     printf("--- Quitter ---\n\n");
@@ -196,6 +219,10 @@ int Quitter(){
     }
 }
 
+
+/**
+ * Fonction permettant de vérifier quel bateau est touché (si touché), sinon, il permettra de définir sois un tire à l'eau sois un tire déjà effectué auparavent
+ */
 void Tirer(){
     if(Boat5[x-1][y-1] == 1){
         Gride[x-1][y-1] = 1;
@@ -252,6 +279,10 @@ void Tirer(){
     InterfaceDeJeu();
 }
 
+
+/**
+ * Fonction permettant de faire un reset du jeu en utilisant les tableaux models ainsi que réinitialiser les variables
+ */
 void ResetGame(){
     for(int o = 0; o < 11; o++){
         Gride[o][o] = Restart[o][o];
@@ -315,6 +346,9 @@ void ResetGame(){
     Boat5Life = 5;
 }
 
+/**
+ * Fonction d'affichage de la grille de jeu, vérification des HP des bateaux et affichage du score
+ */
 void InterfaceDeJeu() {
     system("cls");
     int ContreTorpilleurNumber = 1;
@@ -379,6 +413,9 @@ void InterfaceDeJeu() {
     }
 }
 
+/**
+ * Redirection dans les différents menus
+ */
 void Redirection (Choix){
     switch(Choix){
         case 1:
@@ -391,10 +428,15 @@ void Redirection (Choix){
             Quitter();
             break;
         default:
+            MenuPrincipal();
             break;
     }
 }
 
+/**
+ * Fonction d'affichage du Menu Principal et de demande de choix
+ * @return du choix
+ */
 int MenuPrincipal(){
     int Choix;
     system("cls");
@@ -408,6 +450,10 @@ int MenuPrincipal(){
     Redirection(Choix);
 }
 
+/**
+ * Fonction main contenant de quoi afficher les caractères latins et lancement du Menu Principal
+ * @return
+ */
 int main() {
     SetConsoleOutputCP(65001);
 
