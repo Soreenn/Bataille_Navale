@@ -8,6 +8,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <windows.h>
+#include <stdbool.h>
 //Sert à afficher les caractères latins
 #pragma set_character_execution("UTF-8")
 
@@ -170,6 +171,33 @@ int score(){
     Score = 100 / Try * 100;
     return Score;
 }
+
+typedef struct{
+    char name[32];
+    bool authenticated;
+}user;
+
+user authenticate(){
+    user authenticatingUser;
+
+    fflush(stdin);
+    scanf("%s",authenticatingUser.name);
+    authenticatingUser.authenticated=true;
+
+    return authenticatingUser;
+}
+
+void Pseudo(){
+    system("cls");
+    printf("--- Pseudo ---\n");
+    printf("Entrez un pseudonyme : \n\n");
+    user pseudo = {"",false};
+    pseudo = authenticate();
+    printf("\n\nBievenue %s !\n\n", pseudo.name);
+    system("Pause");
+    MenuPrincipal();
+}
+
 
 /**
  * Fonction de l'aide du jeu renvoyant après la pause au Menu Principal
@@ -422,9 +450,12 @@ void Redirection (Choix){
             InterfaceDeJeu();
             break;
         case 2:
-            Aide();
+            Pseudo();
             break;
         case 3:
+            Aide();
+            break;
+        case 4:
             Quitter();
             break;
         default:
@@ -442,8 +473,9 @@ int MenuPrincipal(){
     system("cls");
     printf("--- Bataille Navale --- \n");
     printf("1 - Jouer \n");
-    printf("2 - Aide \n");
-    printf("3 - Quitter \n\n");
+    printf("2 - Pseudo \n");
+    printf("3 - Aide \n");
+    printf("4 - Quitter \n\n");
     printf("Selection : ");
     scanf("%d", &Choix);
     fflush(stdin);
