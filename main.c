@@ -23,6 +23,7 @@ int Boat3Life = 3;
 int Boat4Life = 4;
 int Boat5Life = 5;
 int Try;
+int Auth = 0;
 
 //Mise en place des différentes grilles pour reset, positions des bateaux et tableau affiché en jeux
 //Les 0 sont vides et les 1 sont des bateaux (parties de bateaux plus précisément)
@@ -177,6 +178,10 @@ typedef struct{
     bool authenticated;
 }user;
 
+/**
+ * Objet pour l'identification (Aide reçu de Kenan)
+ * @return authenticatingUser
+ */
 user authenticate(){
     user authenticatingUser;
 
@@ -187,6 +192,9 @@ user authenticate(){
     return authenticatingUser;
 }
 
+/**
+ * Fonction de pseudo
+ */
 void Pseudo(){
     system("cls");
     printf("--- Pseudo ---\n");
@@ -195,6 +203,7 @@ void Pseudo(){
     pseudo = authenticate();
     printf("\n\nBievenue %s !\n\n", pseudo.name);
     system("Pause");
+    Auth = 1;
     MenuPrincipal();
 }
 
@@ -377,7 +386,12 @@ void ResetGame(){
 /**
  * Fonction d'affichage de la grille de jeu, vérification des HP des bateaux et affichage du score
  */
-void InterfaceDeJeu() {
+void InterfaceDeJeu(authenticatingUser) {
+    if(Auth == 0){
+        printf("Oops, vous n'êtes pas identifié !");
+        system("Pause");
+        MenuPrincipal();
+    }
     system("cls");
     int ContreTorpilleurNumber = 1;
     printf("--- Bataille Navale ---\n\n");
