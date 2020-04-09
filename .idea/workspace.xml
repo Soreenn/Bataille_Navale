@@ -34,6 +34,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RunManager">
     <configuration name="Bataille_Navale" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Bataille_Navale" TARGET_NAME="Bataille_Navale" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Bataille_Navale" RUN_TARGET_NAME="Bataille_Navale">
@@ -131,10 +132,14 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="1877" height="363" key="GridCell.Tab.1.right/0.0.1920.1080@0.0.1920.1080" timestamp="1584206914427" />
-    <state x="837" y="368" key="com.intellij.ide.util.TipDialog" timestamp="1586381537887">
+    <state x="461" y="182" key="SettingsEditor" timestamp="1586466225717">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="837" y="368" key="com.intellij.ide.util.TipDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1586381537887" />
+    <state x="461" y="182" key="SettingsEditor/0.0.1920.1080@0.0.1920.1080" timestamp="1586466225717" />
+    <state x="837" y="368" key="com.intellij.ide.util.TipDialog" timestamp="1586466186965">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="837" y="368" key="com.intellij.ide.util.TipDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1586466186965" />
     <state x="623" y="235" width="672" height="678" key="search.everywhere.popup" timestamp="1584195039284">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
